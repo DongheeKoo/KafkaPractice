@@ -90,6 +90,7 @@ module "ec2" {
       ami = local.ami
       instance_type = local.instance_type
       subnet_id = module.vpc.public_subnet_ids[1]
+      associate_public_ip_address = true
     }
   }
 }
