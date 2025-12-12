@@ -5,6 +5,7 @@ resource "aws_instance" "main" {
 
     subnet_id = each.value.subnet_id
     associate_public_ip_address = lookup(each.value, "associate_public_ip_address", false)
+    key_name = "keyapair"
     vpc_security_group_ids = [aws_security_group.main.id]
     tags = {
         Name = "${var.env_prefix}-${each.key}"
