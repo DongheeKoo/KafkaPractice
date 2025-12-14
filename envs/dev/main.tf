@@ -58,32 +58,38 @@ module "ec2" {
       ami = local.ami
       instance_type = local.instance_type
       subnet_id = module.vpc.public_subnet_ids[0]
+      associate_public_ip_address = true
     }
     peter-zk02 = {
       ami = local.ami
       instance_type = local.instance_type
       subnet_id = module.vpc.public_subnet_ids[0]
+      associate_public_ip_address = true
     }
     peter-zk03 = {
       ami = local.ami
       instance_type = local.instance_type
       subnet_id = module.vpc.public_subnet_ids[1]
+      associate_public_ip_address = true
     }
 
     peter-kafka01 = {
       ami = local.ami
       instance_type = local.instance_type
       subnet_id = module.vpc.public_subnet_ids[0]
+      associate_public_ip_address = true
     }
     peter-kafka02 = {
       ami = local.ami
       instance_type = local.instance_type
       subnet_id = module.vpc.public_subnet_ids[0]
+      associate_public_ip_address = true
     }
     peter-kafka03 = {
       ami = local.ami
       instance_type = local.instance_type
       subnet_id = module.vpc.public_subnet_ids[1]
+      associate_public_ip_address = true
     }
 
     peter-ansible01 = {
